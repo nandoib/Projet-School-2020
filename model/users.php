@@ -13,11 +13,11 @@ function getbdd()
     return $reponse;
  }
 
-function ()
+function selectall()
 {
     $bdd=getbdd();
     $reponse =$bdd->query("SELECT * FROM users ");
-
+    return $reponse;
 }
     
 

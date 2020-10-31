@@ -17,6 +17,7 @@
 
     $userselect = selectuser($_SESSION['userid'],$_SESSION['userpass']);
     $user = $userselect->fetch();
+    $listeeleve=selectall()
     ?>
 
     <h1> Coucou <?= $user['identifiant'];?> </h1>
