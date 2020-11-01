@@ -17,6 +17,12 @@
 
     $userselect = selectuser($_SESSION['userid'],$_SESSION['userpass']);
     $user = $userselect->fetch();
+    
+    if (isset($_GET['eleve']))
+    {
+      $ficheeleve=ficheleve($_GET['eleve']);
+      $ficheuser=$ficheeleve->fetch();
+    }
 
     $listeuser=selectall();
     ?>
@@ -24,12 +30,10 @@
     <h1> Coucou <?= $user['identifiant'];?> </h1>
 
     <?php
-     if (isset($_GET['eleve'])){
+     if(isset($_GET['eleve'])){
     ?>
       <div class="eleve">
-        <p>coucou</p>
-
-
+        Voici la fiche de <?= $_GET['eleve']?><br/> 
     <?php
       }
     ?>
@@ -56,7 +60,7 @@
         }
 
         echo '
-        <b><a class="eleve" href="accueiladmin.php/?eleve='.$donnees['identifiant'].'">'.$donnees['identifiant'].'</a></b><br/>
+        <b><a class="eleve" href="accueiladmin.php?eleve='.$donnees['identifiant'].'">'.$donnees['identifiant'].'</a></b><br/>
         rôle : '  .$role.' <br />
         classe : ' .$donnees['classe']. '<br/><hr/>';
       }

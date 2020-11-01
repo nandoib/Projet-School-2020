@@ -19,6 +19,13 @@ function selectall()
     $selectalluser =$bdd->query("SELECT * FROM users");
     return $selectalluser;
 }
+
+function ficheleve($userid)
+{
+    $bdd=getbdd();
+    $ficheuser=$bdd->query("SELECT identifiant,roleuser,classe FROM users WHERE identifiant = '".$userid."'");
+    return $ficheuser;
+}
     
 
 ?>
