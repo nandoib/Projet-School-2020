@@ -23,7 +23,7 @@ session_start();
 
 ?>
 
-<h1> Coucou <?= $eleve['identifiant'];?> vous êtes éleve de la classe <?= $eleve['classe']?> </h1>
+<h1> Bonjour <?= $eleve['identifiant'];?> vous êtes éleve de la classe <?= $eleve['classe']?> </h1>
 
 <div class="notes">
 
@@ -37,9 +37,6 @@ while ($donnees = $noteseleve->fetch())
 }
 ?>
 </div>
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

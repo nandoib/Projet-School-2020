@@ -11,21 +11,57 @@
   </head>
   <body>
   <?php
-  session_start();
+    session_start();
     include '../model/users.php';
     include '../model/notes.php';
 
     $userselect = selectuser($_SESSION['userid'],$_SESSION['userpass']);
     $user = $userselect->fetch();
-    $listeeleve=selectall()
+
+    $listeuser=selectall();
     ?>
 
     <h1> Coucou <?= $user['identifiant'];?> </h1>
 
-    <h2> Liste des classe </h2>
+    <?php
+     if (isset($_GET['eleve'])){
+    ?>
+      <div class="eleve">
+        <p>coucou</p>
 
 
-      
+    <?php
+      }
+    ?>
+      </div>
+
+    <h2> Liste des utilisateurs </h2>
+
+    <div class="notes">
+
+      <?php 
+      while ($donnees = $listeuser->fetch())
+      {
+        if ($donnees['roleuser'] == "e")
+        {
+          $role = "éleve";
+        }
+        elseif ($donnees['roleuser']=="p")
+        {
+          $role="professeur";
+        }
+        else
+        {
+          $role="administrateur";
+        }
+
+        echo '
+        <b><a class="eleve" href="accueiladmin.php/?eleve='.$donnees['identifiant'].'">'.$donnees['identifiant'].'</a></b><br/>
+        rôle : '  .$role.' <br />
+        classe : ' .$donnees['classe']. '<br/><hr/>';
+      }
+      ?>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

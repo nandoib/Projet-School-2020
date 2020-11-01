@@ -16,8 +16,8 @@ function getbdd()
 function selectall()
 {
     $bdd=getbdd();
-    $reponse =$bdd->query("SELECT * FROM users ");
-    return $reponse;
+    $selectalluser =$bdd->query("SELECT * FROM users");
+    return $selectalluser;
 }
     
 

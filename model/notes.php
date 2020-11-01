@@ -6,6 +6,4 @@ function getnotes($eleve)
     $reponse =$bdd->query("SELECT note,datenote,matiere FROM notes WHERE iduser = '".$eleve."' ORDER BY matiere"); 
     return ($reponse);
 }
-
-
 ?>
