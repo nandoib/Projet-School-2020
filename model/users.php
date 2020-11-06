@@ -20,6 +20,13 @@ function selectall()
     return $selectalluser;
 }
 
+function selectallbyclasse($classe)
+{
+    $bdd=getbdd();
+    $selectalluserbyclasse =$bdd->query("SELECT * FROM users WHERE classe='".$classe."'");
+    return $selectalluserbyclasse;
+}
+
 function ficheleve($userid)
 {
     $bdd=getbdd();

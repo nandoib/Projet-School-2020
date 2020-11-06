@@ -12,55 +12,89 @@
     <link rel="stylesheet" href="style1.css" type="text/css" media="screen" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-              <img src="images/logo.png" alt="logo projet school">
-            </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                    <span class="sr-only">(current)</span>
-                  </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
+  <!doctype html>
+<html lang="en">
+  <head>
+  <title>Accueil admin</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Feuille CSS -->
+    <link rel="stylesheet" href="css/style1.css" type="text/css" media="screen" />
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  </head>
+  <body>
+  <!-- Main navigation -->
+
+  <style>
+    html,
+    body,
+    header,
+    #intro 
+    {
+      height: 100%;
+    }
+
+    #intro 
+    {
+      background: url("images/fond.jpg")no-repeat center center fixed;
+      background-size: 2000px 1000px;
+    }
+    .test
+    {
+      margin-top:200px;
+    }
+  </style>
+  <header>
+    <!--Mask-->
+    <div id="intro" class="view">
+
+      <div class="mask rgba-black-strong">
+
+        <div class="container-fluid d-flex justify-content-center">
+
+          <div class="row d-flex justify-content-center text-center">
+
+            <div class="col-12">
+
+              <!-- Heading -->
+              <h2 class="test display-4 font-weight-bold white-text pt-5">Projet School</h2>
+
+              <!-- Divider -->
+              <hr class="hr-light">
+
+              <div class="login-form">
+                <form action="controller/maincontroller.php" method="post">
+                  <h2 class="text-center">Connection</h2>       
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Nom d'utilisateur" name="useridentifiant" id="useridentifiant" required="required">
+                  </div>
+                  <div class="form-group">
+                      <input type="password" class="form-control" placeholder="Mot de passe" name="userpass" id="userpass" required="required">
+                  </div>
+                  <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+                  </div>
+                  <div class="clearfix">
+                      <label class="float-left form-check-label"><input type="checkbox"> Rester connecté</label>
+                      <a href="#" class="float-right">Mot de passe oublié ?</a>
+                  </div>        
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
-
-    <div class="login-form">
-    <form action="controller/maincontroller.php" method="post">
-        <h2 class="text-center">Connection</h2>       
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Nom d'utilisateur" name="useridentifiant" id="useridentifiant" required="required">
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control" placeholder="Mot de passe" name="userpass" id="userpass" required="required">
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
-        </div>
-        <div class="clearfix">
-            <label class="float-left form-check-label"><input type="checkbox"> Rester connecté</label>
-            <a href="#" class="float-right">Mot de passe oublié ?</a>
-        </div>        
-    </form>
-</div>
-
-      
+    </div>
+  </header>
+  <!--Main Navigation-->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
