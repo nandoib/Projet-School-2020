@@ -35,6 +35,7 @@ if (isset($_POST['useridentifiant']) && isset($_POST['userpass']))
         $_SESSION['userid']=$userid;
         $_SESSION['userpass']=$userpass;
         $_SESSION['roleuser']=$donnees['roleuser'];
+        $_SESSION['classe']=$donnees['classe'];
         
         if ($donnees['roleuser']=='e'){
             header('Location: ../vues/accueileleve.php');
