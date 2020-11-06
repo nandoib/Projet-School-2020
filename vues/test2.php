@@ -23,6 +23,11 @@
     height: 100%;
   }
 
+  p
+  {
+    font-size:18px;
+  }
+
   .rgba-gradient {
     background: radial-gradient(circle, rgba(63,94,251,0.7903536414565826) 0%, rgba(252,70,107,0.6446953781512605) 100%);
   }
@@ -82,7 +87,7 @@
 </header>
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row animated fadeInRightBig">
         <div id="start" class="col-12">
             <h4 class="display-1 font-weight-bold text-center mt-3 mb-5">L'actualité de l'école</h4>
             <hr class=" my-2 w-50">
@@ -177,94 +182,86 @@
             </section>
         </div>
         <!-- /Les profs absents fin -->
-        
+
+        <!-- Les prochaines rencontres -->
         <div class="col-5 offset-1 z-depth-5">
             <h2 class="text-center font-weight-bold mb-4 pb-1">Les prochaines rencontres</h2>
             <div class="row">
-                <div class="col-md-6 mb-md-0 mb-5">
-                    <div class="row">
-                        <div class="col-lg-2 col-md-3 col-2">
-                            <i class="fas fa-bullhorn blue-text fa-2x"></i>
-                        </div>
-                        <div class="col-lg-10 col-md-9 col-10 mb-5">
-                            <h4 class="font-weight-bold">Marketing</h4>
-                            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            <a class="btn btn-primary btn-sm">Learn more</a>
-                        </div>
+              <div class="col-md-6 mb-md-0 mb-5">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-2">
+                      <i class="far fa-handshake blue-text fa-2x"></i>
                     </div>
+                    <div class="col-lg-10 col-md-9 col-10 mb-5">
+                      <h4 class="font-weight-bold">Réunion parents-profs</h4>
+                      <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      <a class="btn btn-primary btn-lg">S'inscrire</a>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="col-md-6 mb-md-0 mb-5">
-                    <div class="row">
-
-
-    <div class="col-lg-2 col-md-3 col-2">
-      <i class="fas fa-cogs pink-text fa-2x"></i>
-    </div>
-   
-
-    
-    <div class="col-lg-10 col-md-9 col-10 mb-5">
-      <h4 class="font-weight-bold">Customization</h4>
-      <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-      <a class="btn btn-pink btn-sm">Learn more</a>
-    </div>
-    
-
-  </div>
+                  <div class="row">
+                    <div class="col-lg-2 col-md-3 col-2">
+                    <i class="far fa-flag blue-text fa-2x"></i>
+                    </div>
   
+                    <div class="col-lg-10 col-md-9 col-10 mb-5">
+                      <h4 class="font-weight-bold">Visite chateau de Versaille</h4>
+                      <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      <a class="btn btn-pink btn-lg">S'inscrire</a>
+                    </div>
+                  </div>
+                </div>
 
-</div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-3 col-2">
+                    <i class="fas fa-futbol blue-text fa-2x"></i>
+                    </div>
 
+                    <div class="col-lg-10 col-md-9 col-10">
+                      <h4 class="font-weight-bold">UNSS: tournoi football</h4>
+                      <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      <a class="btn btn-purple btn-lg">S'inscrire</a>
+                    </div>
+                  </div>
+                </div>
 
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-3 col-2">
+                    <i class="fas fa-laptop-code blue-text fa-2x"></i>
+                    </div>
 
-<div class="col-md-4">
-
- 
-  <div class="row">
-
- 
-    <div class="col-lg-2 col-md-3 col-2">
-      <i class="fas fa-tachometer-alt purple-text fa-2x"></i>
-    </div>
-
-
-   
-    <div class="col-lg-10 col-md-9 col-10">
-      <h4 class="font-weight-bold">Support</h4>
-      <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-      <a class="btn btn-purple btn-sm">Learn more</a>
-    </div>
-
-
-  </div>
- 
-
-</div>
-
-
-</div>
-
+                    <div class="col-lg-10 col-md-9 col-10">
+                      <h4 class="font-weight-bold">Cours de PHP</h4>
+                      <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      <a class="btn btn-purple btn-lg">S'inscrire</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-
+      </div>
     </div>
-</div>
+  </div>
 
 <!-- Footer -->
 <footer class="page-footer black-text">
- 
   <!-- Footer Elements -->
   <div class="container">
-
     <!-- Grid row-->
     <div class="row">
-
       <!-- Grid column -->
       <div class="col-md-12 py-5">
+      <h3 class="display-3 text-center animated wow fadeIn">Retrouvez nous sur </h3>
         <div class="mb-5 flex-center">
 
           <!-- Facebook -->
@@ -294,13 +291,17 @@
         </div>
       </div>
       <!-- Grid column -->
-
     </div>
     <!-- Grid row-->
-
+  </div>
 </footer>
 <!-- Footer -->
 
+<script>
+$( document ).ready(function() {
+  new WOW().init();
+});
+</script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
