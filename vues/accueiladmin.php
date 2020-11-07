@@ -83,12 +83,12 @@
 
         <div class="container-fluid d-flex justify-content-center">
 
-          <div class="row d-flex justify-content-center text-center">
+          <div class="row d-flex align-items-center justify-content-center text-center">
 
             <div class="col-12">
 
               <!-- Heading -->
-              <h2 class="test display-4 font-weight-bold white-text pt-5">Bienvenue admin</h2>
+              <h2 class="display-4 font-weight-bold white-text pt-5">Bienvenue admin</h2>
 
               <!-- Divider -->
               <hr class="hr-light">

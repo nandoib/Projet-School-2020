@@ -68,8 +68,18 @@
         <!-- Mask & flexbox options-->
         <div class="mask rgba-gradient">
           <!-- Content -->
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
+                  <div class="noteok col-12">
+                    <?php if (isset($_GET['notereleve']))
+                    {
+                      ?>
+                        <div class="alert alert-success text-center" role="alert">
+                        <b>L'éleve a bien été noté </b>
+                        </div>
+                      <?php
+                    }?>
+                  </div>
                     <div class="logoprincipal col-md-12 mb-4 white-text text-center">
                         <h3 class="display-1 mt-5 font-weight-bold white-text animated fadeInDownBig">Projet School</h3>
                         <hr class="hr-light my-2 w-50">
@@ -102,29 +112,32 @@
           </div>
 
           <div class="modal-body mx-3">
-            <div class="mb-5">
-              <i class="fas fa-envelope prefix grey-text fa-2x"></i>
-              <label for="cars">Eleve à noter:</label>
-              <select class="browser-default custom-select" name="eleveanoter" id="eleveanoter">
-                <?php 
-                  while ($donnees = $listeuser->fetch())
-                  {
-                    echo'<option value="'.$donnees['identifiant'].'">'.$donnees['identifiant'].'</option>';
-                  }
-                ?>  
-              </select>
-            </div>
+            <form action="../controller/maincontroller.php" method="post" class="notereleve">
+              <div class="mb-5">
+              
+                <i class="fas fa-envelope prefix grey-text fa-2x"></i>
+                <label for="cars">Eleve à noter:</label>
+                <select class="browser-default custom-select" name="eleveanoter" id="eleveanoter">
+                  <?php 
+                    while ($donnees = $listeuser->fetch())
+                    {
+                      echo'<option value="'.$donnees['identifiant'].'">'.$donnees['identifiant'].'</option>';
+                    }
+                  ?>  
+                </select>
+              </div>
 
-            <div class="md-form mb-4">
-              <i class="fas fa-lock prefix grey-text"></i>
-              <input type="password" id="defaultForm-pass" class="form-control validate">
-              <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
-            </div>
-
+              <div class="md-form mb-4">
+                <i class="fas fa-lock prefix grey-text"></i>
+                <input type="number" name="note" id="note" class="form-control validate">
+                <label data-error="wrong" data-success="right" for="defaultForm-pass">Note de l'éleve :</label>
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+              <input class="btn btn-indigo" type="submit" value="Valider">
+              </div>
+            </form>
           </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <button class="btn btn-default">Login</button>
-          </div>
+          
         </div>
       </div>
     </div>

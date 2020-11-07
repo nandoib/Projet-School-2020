@@ -9,7 +9,7 @@ function getbdd()
  function selectuser($userid,$userpass)
  {
     $bdd=getbdd();
-    $reponse =$bdd->query("SELECT identifiant,pass,roleuser,classe FROM users WHERE identifiant = '".$userid."' AND pass = '".$userpass."' ");
+    $reponse =$bdd->query("SELECT * FROM users WHERE identifiant = '".$userid."' AND pass = '".$userpass."' ");
     return $reponse;
  }
 

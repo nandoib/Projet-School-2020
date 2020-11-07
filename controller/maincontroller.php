@@ -1,6 +1,7 @@
 <?php
 session_start(); 
 include '../model/users.php';
+include '../model/notes.php';
 
 
 if (isset($_POST['newuser']))
@@ -43,6 +44,7 @@ if (isset($_POST['useridentifiant']) && isset($_POST['userpass']))
         }
 
         if ($donnees['roleuser']=='p'){
+            $_SESSION['matiere']=$donnees['matiere'];
             header('Location: ../vues/accueilprof.php');
         }
 
@@ -60,6 +62,11 @@ if (isset($_POST['useridentifiant']) && isset($_POST['userpass']))
 if (isset($_GET['supprimereleveadmin']) && $_SESSION['roleuser'] ==  "a")
 {
     supprimeruser($_GET['supprimereleveadmin']);
+}
+
+if (isset($_POST['eleveanoter']) && isset($_POST['note'])){
+    addnote($_POST['eleveanoter'],$_SESSION['matiere'],$_POST['note']);
+    header('Location: ../vues/accueilprof.php?notereleve=ok');
 }
 
 
